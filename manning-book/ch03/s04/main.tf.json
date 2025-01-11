@@ -1,0 +1,38 @@
+{
+    "resource": [
+        {
+            "google_compute_instance": [
+                {
+                    "database-server": [
+                        {
+                            "allow_stopping_for_update": true,
+                            "boot_disk": [
+                                {
+                                    "initialize_params": [
+                                        {
+                                            "image": "ubuntu-1804-lts"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "labels": {
+                                "automated": true,
+                                "business_unit": "ecommerce",
+                                "cost_center": 123456,
+                                "customer": "my-company"
+                            },
+                            "machine_type": "e2-micro",
+                            "name": "database-server",
+                            "network_interface": [
+                                {
+                                    "network": "default"
+                                }
+                            ],
+                            "zone": "us-central1-a"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

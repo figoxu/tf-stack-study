@@ -1,0 +1,16 @@
+{
+    "resource": [
+        {
+            "google_project": [
+                {
+                    "databases": [
+                        {
+                            "name": "databases",
+                            "project_id": "databases-rosemary"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

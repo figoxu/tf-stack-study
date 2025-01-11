@@ -1,0 +1,65 @@
+{
+    "resource": [
+        {
+            "google_compute_instance": {
+                "testing-server-sandbox-0": {
+                    "allow_stopping_for_update": true,
+                    "boot_disk": [
+                        {
+                            "initialize_params": [
+                                {
+                                    "image": "ubuntu-1804-lts"
+                                }
+                            ]
+                        }
+                    ],
+                    "labels": {
+                        "automated": true,
+                        "cost_center": 123456,
+                        "customer": "community",
+                        "environment": "testing",
+                        "expiration": "2021-11-17"
+                    },
+                    "machine_type": "e2-micro",
+                    "name": "testing-server-sandbox-0",
+                    "network_interface": [
+                        {
+                            "network": "default"
+                        }
+                    ],
+                    "zone": "us-central1-a"
+                }
+            }
+        },
+        {
+            "google_compute_instance": {
+                "testing-server-0": {
+                    "allow_stopping_for_update": true,
+                    "boot_disk": [
+                        {
+                            "initialize_params": [
+                                {
+                                    "image": "ubuntu-1804-lts"
+                                }
+                            ]
+                        }
+                    ],
+                    "labels": {
+                        "automated": true,
+                        "cost_center": 123456,
+                        "customer": "community",
+                        "environment": "testing"
+                    },
+                    "machine_type": "e2-micro",
+                    "name": "testing-server-0",
+                    "network_interface": [
+                        {
+                            "network": "default"
+                        }
+                    ],
+                    "zone": "us-central1-a"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,178 @@
+{
+    "resource": [
+        {
+            "google_compute_resource_policy": {
+                "weekend": {
+                    "description": "start and stop instances over the weekend",
+                    "instance_schedule_policy": {
+                        "expiration_time": "2021-12-03T00:00:00Z",
+                        "time_zone": "US/Central",
+                        "vm_start_schedule": {
+                            "schedule": "0 0 * * MON"
+                        },
+                        "vm_stop_schedule": {
+                            "schedule": "0 0 * * SAT"
+                        }
+                    },
+                    "name": "prod-schedule",
+                    "region": "us-central1"
+                }
+            }
+        },
+        {
+            "google_compute_instance": {
+                "prod-server-sandbox-0": {
+                    "allow_stopping_for_update": true,
+                    "boot_disk": [
+                        {
+                            "initialize_params": [
+                                {
+                                    "image": "ubuntu-1804-lts"
+                                }
+                            ]
+                        }
+                    ],
+                    "labels": {
+                        "name": "prod-server-sandbox-0",
+                        "purpose": "manning-infrastructure-as-code"
+                    },
+                    "machine_type": "n2d-standard-16",
+                    "name": "prod-server-sandbox-0",
+                    "network_interface": [
+                        {
+                            "network": "default"
+                        }
+                    ],
+                    "resource_policies": [
+                        "${google_compute_resource_policy.weekend.id}"
+                    ],
+                    "zone": "us-central1-a"
+                }
+            }
+        },
+        {
+            "google_compute_instance": {
+                "prod-server-sandbox-1": {
+                    "allow_stopping_for_update": true,
+                    "boot_disk": [
+                        {
+                            "initialize_params": [
+                                {
+                                    "image": "ubuntu-1804-lts"
+                                }
+                            ]
+                        }
+                    ],
+                    "labels": {
+                        "name": "prod-server-sandbox-1",
+                        "purpose": "manning-infrastructure-as-code"
+                    },
+                    "machine_type": "n2d-standard-16",
+                    "name": "prod-server-sandbox-1",
+                    "network_interface": [
+                        {
+                            "network": "default"
+                        }
+                    ],
+                    "resource_policies": [
+                        "${google_compute_resource_policy.weekend.id}"
+                    ],
+                    "zone": "us-central1-a"
+                }
+            }
+        },
+        {
+            "google_compute_instance": {
+                "prod-server-0": {
+                    "allow_stopping_for_update": true,
+                    "boot_disk": [
+                        {
+                            "initialize_params": [
+                                {
+                                    "image": "ubuntu-1804-lts"
+                                }
+                            ]
+                        }
+                    ],
+                    "labels": {
+                        "name": "prod-server-0",
+                        "purpose": "manning-infrastructure-as-code"
+                    },
+                    "machine_type": "n2d-standard-32",
+                    "name": "prod-server-0",
+                    "network_interface": [
+                        {
+                            "network": "default"
+                        }
+                    ],
+                    "resource_policies": [
+                        "${google_compute_resource_policy.weekend.id}"
+                    ],
+                    "zone": "us-central1-a"
+                }
+            }
+        },
+        {
+            "google_compute_instance": {
+                "prod-server-1": {
+                    "allow_stopping_for_update": true,
+                    "boot_disk": [
+                        {
+                            "initialize_params": [
+                                {
+                                    "image": "ubuntu-1804-lts"
+                                }
+                            ]
+                        }
+                    ],
+                    "labels": {
+                        "name": "prod-server-1",
+                        "purpose": "manning-infrastructure-as-code"
+                    },
+                    "machine_type": "n2d-standard-32",
+                    "name": "prod-server-1",
+                    "network_interface": [
+                        {
+                            "network": "default"
+                        }
+                    ],
+                    "resource_policies": [
+                        "${google_compute_resource_policy.weekend.id}"
+                    ],
+                    "zone": "us-central1-a"
+                }
+            }
+        },
+        {
+            "google_compute_instance": {
+                "prod-server-2": {
+                    "allow_stopping_for_update": true,
+                    "boot_disk": [
+                        {
+                            "initialize_params": [
+                                {
+                                    "image": "ubuntu-1804-lts"
+                                }
+                            ]
+                        }
+                    ],
+                    "labels": {
+                        "name": "prod-server-2",
+                        "purpose": "manning-infrastructure-as-code"
+                    },
+                    "machine_type": "n2d-standard-32",
+                    "name": "prod-server-2",
+                    "network_interface": [
+                        {
+                            "network": "default"
+                        }
+                    ],
+                    "resource_policies": [
+                        "${google_compute_resource_policy.weekend.id}"
+                    ],
+                    "zone": "us-central1-a"
+                }
+            }
+        }
+    ]
+}
